@@ -1,0 +1,16 @@
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+h3, p, h4 {
+  text-align: center;
+}
+
+#showUsers {
+  text-align: center;
+}
