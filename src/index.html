@@ -7,7 +7,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-info" id="navybar">
       <a class="navbar-brand" href="/index.html"><img src="/images/github2.png" id="smol"></a>
-      <form class="form-inline my-2 my-lg-0">
+      <form class="form-inline my-2 my-lg-0" id="search">
         <input class="form-control mr-sm-2" type="search" placeholder="Search GitSome" aria-label="Search" id="searchbar">
       </form>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -30,14 +30,14 @@
       <div class="jumbotron" id="git">
         <div class="container" id="gitcontain">
           <h1>Learn about People on Github without any code!</h1>
-          <h3>Using the Hello World guide, you’ll create access your GitHub, find your match, and open a match request.</h3>
+          <h3>Using this Hello World guide to love, you can find your match, access their GitHub, and start a new coding romance today!</h3>
           <h2 id="resultsFound"></h2>
           <div id="markLocation">
           </div>
         </div>
+        </div>
         <div id="showUsers" class="row">
         </div>
-      </div>
     </div>
     <div id="codelines">
       <div class="signin">
@@ -48,9 +48,9 @@
           </div>
           <div class="col-md-5">
             <div class="email">
-              <form id="nameForm">
+              <form class="nameForm">
                 <label for="username">Username:</label>
-                <input type="text" name="username" class="form-control" id="username">
+                <input type="text" name="username" class="form-control" id="username" required>
                 <br>
                 <button type="submit" class="btn btn-primary" id="click">Sign in to GitSome</button>
                 <br>
