@@ -27,10 +27,13 @@ function getUser(username) {
 
 function getMatches(location, followers, language){
   if (location == undefined){
-    return gitPromise(`https://api.github.com/search/users?q=Epicodus+followers:${followers-1}..${followers+1}+language:"${language}"&per_page=150`);
+    return gitPromise(`https://api.github.com/search/users?q=followers:${followers-10}..${followers+10}&per_page=200`);
   }
   else {
-     return gitPromise(`https://api.github.com/search/users?q=epicodus+followers:${followers-5}..${followers+5}+language:"${language}"&per_page=150`);
+    let splitLocation = location.split(",");
+    let city= splitLocation[0].toLowerCase();
+    console.log(city)
+    return gitPromise(`https://api.github.com/search/users?q=followers:${followers-4}..${followers+4}+location:${city}+language:${language}&per_page=45`);
   }
 }
 

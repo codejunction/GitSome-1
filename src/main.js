@@ -21,10 +21,6 @@ function getUserInfo(user) {
   let promiseInfo = getUser(user.login);
   let promiseLang = getRepo(user.login);
   Promise.all([promiseInfo, promiseLang]).then(function(values){
-    console.log(values);
-    console.log(values[0].login);
-    console.log(values[0].followers);
-    console.log(values[1][0].language);
     getUserMatches(values[0].location, values[0].followers, values[1][0].language);
   }, handleErrors);
 }
@@ -41,7 +37,7 @@ function getUserMatches(location, followers, language) {
         $("#markLocation").text(" ")
     });
     matches.items.forEach(function(match) {
-      $('#showUsers').append(`<div class="col-md-4"><a target="_blank" href="${match.html_url}"><h3 class=loginName>${match.login}</h3></a><img src="${match.avatar_url}" id="profilepic">`);
+      $('#showUsers').append(`<div class="col-md-4"><a target="_blank" href="${match.html_url}"><h3 class=loginName>${match.login}</h3></a><img src="${match.avatar_url}" id="profilepic"><hr>`);
     });
   }, handleErrors);
 }
