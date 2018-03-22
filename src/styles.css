@@ -36,7 +36,6 @@ h3, p, h4 {
 }
 
 #git {
-  display:none;
   background:
   linear-gradient(0deg, rgba(255,255,255,1), rgba(255,255,255,0) 70.71%),
   linear-gradient(to right, rgb(222, 237, 253) 50%, rgb(224, 249, 234) 75%);
@@ -120,7 +119,7 @@ h3, p, h4 {
   background-color: #FAFBFC;
 }
 
-#hidden {
+.hidden {
   display:none;
 }
 #nameForm label {
@@ -149,7 +148,21 @@ h3, p, h4 {
   margin-right: 35px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.6;
-   font-weight: 300;
-   font-size: 12px;
-    color: #ABADAF;
+  font-weight: 300;
+  font-size: 12px;
+  color: #ABADAF;
+}
+
+#resultsFound {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #565D64;
+
+}
+.loginName {
+  color: #565D64;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  line-height: 1.6;
+  font-weight: 300;
 }

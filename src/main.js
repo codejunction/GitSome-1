@@ -8,8 +8,11 @@ function getInfo(user) {
     getMatches(response.location, response.followers, function(matches){
       $('#showUsers').text('');
       $("#resultsFound").text(matches.total_count + " Results Found");
+      if (response.location == undefined){
+        $("#markLocation").append("<h3><strong>We recommend you put in a location to get a more accurate programmer suggestion!</strong></h3>")
+      }
       matches.items.forEach(function(match) {
-        $('#showUsers').append(`<div class="col-md-4"><a href="${match.html_url}"><h3>${match.login}</h3></a><img src="${match.avatar_url}" id="profilepic"><h4>${match.name}</h4>`);
+        $('#showUsers').append(`<div class="col-md-4"><a href="${match.html_url}"><h3 class=loginName>${match.login}</h3></a><img src="${match.avatar_url}" id="profilepic">`);
       });
     });
   });
@@ -17,7 +20,7 @@ function getInfo(user) {
 
 $(document).ready(function() {
   $('#nameForm').submit(function(event) {
-    $("#git").show();
+    $(".hidden").show();
     $("#codelines").hide();
     let searchString = $('#username').val();
     $('#username').val("");
@@ -25,14 +28,14 @@ $(document).ready(function() {
       $('#showUsers').text('');
       $("#resultsFound").text(response.total_count + " Result(s) Found");
       response.items.forEach(function(user) {
-        $('#showUsers').append(`<div class="col-md-4" id="me"><a href="${user.html_url}"><h3>${user.login}</h3></a><img src="${user.avatar_url}" id="profilepic"><button type="button" class="btn btn-info matchMe">Match Me!</button><hr></div>`);
+        $('#showUsers').append(`<div class="col-md-4" id="me"><a href="${user.html_url}"><h3 class=loginName>${user.login}</h3></a><img src="${user.avatar_url}" id="profilepic"><button type="button" class="btn btn-info matchMe">Match Me!</button><hr></div>`);
         $('.matchMe').last().click(function() {getInfo(user)});
       });
     });
     event.preventDefault();
   });
   $("#matchrequest").click(function(event){
-    $("#git").hide();
+    $(".hidden").hide();
     $("#codelines").show();
   });
 });
