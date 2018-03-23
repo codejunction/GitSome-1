@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GitSome</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/github.png">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-info" id="navybar">
+      <a class="navbar-brand" href="/index.html"><img src="/images/github2.png" id="smol"></a>
+      <form class="form-inline my-2 my-lg-0" id="search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search GitSome" aria-label="Search" id="searchbar">
+      </form>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="matchrequest">Match request</a>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Issues</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Marketplace</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Explore</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hidden">
+      <div class="jumbotron" id="git">
+        <div class="container" id="gitcontain">
+          <h1>Learn about People on Github without any code!</h1>
+          <h3>Using this Hello World guide to love, you can find your match, access their GitHub, and start a new coding romance today!</h3>
+          <h2 id="resultsFound"></h2>
+          <div id="markLocation">
+          </div>
+        </div>
+        </div>
+        <div id="showUsers" class="row">
+        </div>
+    </div>
+    <div id="codelines">
+      <div class="signin">
+        <div class="row">
+          <div class="col-md-7">
+            <h1>Built for developing-relationships</h1>
+            <h3>GitSome is a matchmaking platform inspired by GitHub and dating applications. From <span class="white">open source</span> to an <span class="white">open relationship</span>, you can have brunch and review code, peek projects, and build relationships that will last alongside millions of other developers.</h3>
+          </div>
+          <div class="col-md-5">
+            <div class="email">
+              <form class="nameForm">
+                <label for="username">Username:</label>
+                <input type="text" name="username" class="form-control" id="username" required>
+                <br>
+                <button type="submit" class="btn btn-primary" id="click">Sign in to GitSome</button>
+                <br>
+                <p id="terms">By clicking "Sign in to GitSome", you agree to our terms of service and privacy policy. Your GitHub is now property of GitSome.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="bundle.js"></script></body>
+</html>
